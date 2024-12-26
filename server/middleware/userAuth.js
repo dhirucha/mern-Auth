@@ -13,7 +13,7 @@ const userAuth = async (req, res, next) => {
 
             if(tokenDecode.id){
                 req.body.userId = tokenDecode.id;
-            }else{
+             }else{
                 return res.json({success: false, message: "Not authorized login again"})
             }
             
@@ -21,6 +21,7 @@ const userAuth = async (req, res, next) => {
 
         } catch (error) {
             res.json({success: false, message: error.message});
+             
         }
 }
 
