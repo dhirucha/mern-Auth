@@ -7,6 +7,8 @@ import { createContext, useEffect, useState } from "react";
 
  export const AppContextProvider = (props) =>{
 
+    axios.defaults.withCredentials = true; 
+
 
     const backendUrl = import.meta.env.VITE_BACKEND_URL
     const [isLoggedin, setIsLoggedin] = useState(false)
